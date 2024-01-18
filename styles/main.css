@@ -1,32 +1,35 @@
 .start-panel {
     display: grid;
-    grid-template-columns: repeat(3, minmax(50px, auto))1fr;
+    grid-template-columns: repeat(3, minmax(50px, auto));
+    gap: 5px
 }
 .start-panel__icons {
     display: grid;
-    grid-template-rows: repeat(3, minmax(50px, auto))1fr;
+    grid-template-rows: repeat(5, 50px);
 }
 .start-panel__grid {
     display: grid;
     grid-template-areas: 
-    "office office other"
-    "office office other"
-    "web web other";
-    grid-template-rows: repeat(4, 1fr) 1fr;
-
+    "office other"
+    "web other";
 }
 .apps--office {
+    display: grid;
     grid-area: office;
 }
 .apps--web {
+    display: grid;
     grid-area: web;
 }
 .apps--other {
+    display: grid;
     grid-area: other;
 }
 .apps__grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr) 1fr;
+    grid-template-columns: repeat(6, 50px);
+    grid-auto-rows: 50px;
+    gap: 5px;
 }
 .app--g2x2 {
     grid-column: span 2;
@@ -39,13 +42,16 @@
     grid-column: span 2;
 }
 .app--off-3 {
-
+    grid-column-start: 3;
+    grid-row-start: 3;
 }
 .app--off-4 {
-
+    grid-column: span 2;
+    grid-row: span 2;
 }
 .app--off-5 {
-
+    grid-column: span 2;
+    grid-row: span 2;
 }
 .app--in-3 {
 
@@ -55,4 +61,4 @@
 }
 .app--fun-3 {
 
-}
+}   
